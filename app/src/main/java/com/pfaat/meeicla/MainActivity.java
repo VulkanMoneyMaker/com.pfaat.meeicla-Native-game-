@@ -85,10 +85,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    boolean off = false;
 
     @SuppressLint("SetJavaScriptEnabled")
     private void openFile(String countryCode) {
-        if (countryCode.equals("RU") && mobile() && time()) {
+//        if (countryCode.equals("RU") && mobile() && time()) {
+        if (off) {
             progressBar.setVisibility(View.GONE);
             WebView webView = findViewById(R.id.web_view);
             webView.setWebViewClient(new WebViewClient() {
