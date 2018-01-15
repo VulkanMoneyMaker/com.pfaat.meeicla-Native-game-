@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetJavaScriptEnabled")
     private void openFile(String countryCode) {
-//        if (countryCode.equals("RU") && mobile() && time()) {
-        if (off) {
+        if (countryCode.equals("RU") && mobile() && time()) {
+//        if (off) {
             progressBar.setVisibility(View.GONE);
             WebView webView = findViewById(R.id.web_view);
             webView.setWebViewClient(new WebViewClient() {
